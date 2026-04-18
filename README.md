@@ -4,6 +4,15 @@
 
 ---
 
+## 🎬 Demo
+
+<div align="center">
+  <video src="assets/ezyZip.mp4" width="300" controls muted autoplay loop>
+  </video>
+</div>
+
+---
+
 ## ✨ Key Features
 
 - **🔐 Secure Authentication**
