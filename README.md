@@ -102,14 +102,6 @@ lib/
 
 ---
 
-## 📸 Screenshots
-
-| Onboarding | Home (Light) | Home (Dark) | Add Event |
-|:---:|:---:|:---:|:---:|
-| <img src="assets/images/EVENTLY_APP.png" width="150"> | *(Add Screen)* | *(Add Screen)* | *(Add Screen)* |
-
----
-
 ## 🤝 Contribution
 
 Contributions are welcome! Please feel free to submit a Pull Request.
