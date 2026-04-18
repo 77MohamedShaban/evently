@@ -227,7 +227,8 @@ class _AddEventScreenState extends State<AddEventScreen>
                             Event(
                               title: titleController.text,
                               desc: descriptionController.text,
-                              category: tabAddList[_tabController.index].text,
+                              category:
+                                  AppConstance.categories[_tabController.index],
                               userId: FirebaseAuth.instance.currentUser!.uid,
                               dateAndTime: Timestamp.fromDate(
                                 DateTime(
@@ -245,7 +246,8 @@ class _AddEventScreenState extends State<AddEventScreen>
                               id: eventId,
                               title: titleController.text,
                               desc: descriptionController.text,
-                              category: tabAddList[_tabController.index].text,
+                              category:
+                                  AppConstance.categories[_tabController.index],
                               userId: FirebaseAuth.instance.currentUser!.uid,
                               dateAndTime: Timestamp.fromDate(
                                 DateTime(

@@ -1,4 +1,5 @@
 import 'package:evently/core/remote/network/firestore_manager.dart';
+import 'package:evently/core/resources/AppConstance.dart';
 import 'package:evently/model/event.dart';
 import 'package:flutter/material.dart';
 import '../../../../../core/resources/StringsManager.dart';
@@ -42,7 +43,7 @@ class ViewTabs extends StatelessWidget {
         ),
 
         StreamBuilder(
-          stream: FirestoreManager.getFilteredEventsStream(StringsManager.sport),
+          stream: FirestoreManager.getFilteredEventsStream(AppConstance.categories[0]),
           builder: (context, snapshot) {
             /// loading
             if (snapshot.connectionState == ConnectionState.waiting) {
@@ -67,7 +68,7 @@ class ViewTabs extends StatelessWidget {
           },
         ),
         StreamBuilder(
-          stream: FirestoreManager.getFilteredEventsStream(StringsManager.birthday),
+          stream: FirestoreManager.getFilteredEventsStream(AppConstance.categories[1]),
           builder: (context, snapshot) {
             /// loading
             if (snapshot.connectionState == ConnectionState.waiting) {
@@ -92,7 +93,7 @@ class ViewTabs extends StatelessWidget {
           },
         ),
         StreamBuilder(
-          stream: FirestoreManager.getFilteredEventsStream(StringsManager.meeting),
+          stream: FirestoreManager.getFilteredEventsStream(AppConstance.categories[2]),
           builder: (context, snapshot) {
             /// loading
             if (snapshot.connectionState == ConnectionState.waiting) {
@@ -117,7 +118,7 @@ class ViewTabs extends StatelessWidget {
           },
         ),
         StreamBuilder(
-          stream: FirestoreManager.getFilteredEventsStream(StringsManager.bookClub),
+          stream: FirestoreManager.getFilteredEventsStream(AppConstance.categories[3]),
           builder: (context, snapshot) {
             /// loading
             if (snapshot.connectionState == ConnectionState.waiting) {
@@ -142,7 +143,7 @@ class ViewTabs extends StatelessWidget {
           },
         ),
         StreamBuilder(
-          stream: FirestoreManager.getFilteredEventsStream(StringsManager.exhibition),
+          stream: FirestoreManager.getFilteredEventsStream(AppConstance.categories[4]),
           builder: (context, snapshot) {
             /// loading
             if (snapshot.connectionState == ConnectionState.waiting) {

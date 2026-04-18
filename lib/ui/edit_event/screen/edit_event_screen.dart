@@ -223,7 +223,9 @@ class _EditEventScreenState extends State<EditEventScreen>
                   titleText: StringsManager.eventDate,
                   chooseText: selectedDate != null
                       ? DateFormat.yMMMd(local).format(selectedDate!)
-                      : DateFormat.yMMMd(local).format(event.dateAndTime!.toDate()),
+                      : DateFormat.yMMMd(
+                          local,
+                        ).format(event.dateAndTime!.toDate()),
                   onPress: () async {
                     await chooseEventDate();
                   },
@@ -233,9 +235,9 @@ class _EditEventScreenState extends State<EditEventScreen>
                   titleText: StringsManager.eventTime,
                   chooseText: selectedTime != null
                       ? selectedTime!.format(context)
-                      : DateFormat.jm(local)
-                            .format(event.dateAndTime!.toDate())
-                            .toUpperCase(),
+                      : DateFormat.jm(
+                          local,
+                        ).format(event.dateAndTime!.toDate()).toUpperCase(),
                   onPress: () async {
                     await chooseEventTime();
                   },
@@ -245,7 +247,7 @@ class _EditEventScreenState extends State<EditEventScreen>
                     titleController,
                     descriptionController,
                   ]),
-                  builder: (context,_) {
+                  builder: (context, _) {
                     return BtnMain(
                       text: StringsManager.eventUpdate,
                       onClick: hasChanges()
@@ -258,8 +260,8 @@ class _EditEventScreenState extends State<EditEventScreen>
                                       id: event.id,
                                       title: titleController.text,
                                       desc: descriptionController.text,
-                                      category:
-                                          tabAddList[_tabController.index].text,
+                                      category: AppConstance
+                                          .categories[_tabController.index],
                                       userId: FirebaseAuth
                                           .instance
                                           .currentUser!
@@ -294,8 +296,8 @@ class _EditEventScreenState extends State<EditEventScreen>
                                       id: event.id,
                                       title: titleController.text,
                                       desc: descriptionController.text,
-                                      category:
-                                          tabAddList[_tabController.index].text,
+                                      category: AppConstance
+                                          .categories[_tabController.index],
                                       userId: FirebaseAuth
                                           .instance
                                           .currentUser!
@@ -333,9 +335,8 @@ class _EditEventScreenState extends State<EditEventScreen>
                                         id: event.id,
                                         title: titleController.text,
                                         desc: descriptionController.text,
-                                        category:
-                                            tabAddList[_tabController.index]
-                                                .text,
+                                        category: AppConstance
+                                            .categories[_tabController.index],
                                         userId: FirebaseAuth
                                             .instance
                                             .currentUser!

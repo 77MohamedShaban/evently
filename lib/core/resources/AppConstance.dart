@@ -5,7 +5,15 @@ import 'AssetsManager.dart';
 import 'StringsManager.dart';
 
 abstract final class AppConstance {
-  static  List<TabModel> get tabHomeList => [
+  static const List<String> categories = [
+    "Sport",
+    "Birthday",
+    "Meeting",
+    "Book Club",
+    "Exhibition",
+  ];
+
+  static List<TabModel> get tabHomeList => [
     TabModel(iconPath: AssetsManager.allIcon, text: StringsManager.all),
     TabModel(iconPath: AssetsManager.sportIcon, text: StringsManager.sport),
     TabModel(
@@ -19,6 +27,7 @@ abstract final class AppConstance {
       text: StringsManager.exhibition,
     ),
   ];
+
   static List<TabModel> get tabAddList => [
     TabModel(iconPath: AssetsManager.sportIcon, text: StringsManager.sport),
     TabModel(
@@ -36,9 +45,7 @@ abstract final class AppConstance {
   static String getEventImage(String category, bool isDark) {
     switch (category) {
       case "Sport":
-        return isDark
-            ? AssetsManager.sport_dark
-            : AssetsManager.sport_light;
+        return isDark ? AssetsManager.sport_dark : AssetsManager.sport_light;
 
       case "Birthday":
         return isDark
@@ -46,9 +53,7 @@ abstract final class AppConstance {
             : AssetsManager.birthday_light;
 
       case "Book Club":
-        return isDark
-            ? AssetsManager.book_dark
-            : AssetsManager.book_light;
+        return isDark ? AssetsManager.book_dark : AssetsManager.book_light;
 
       case "Exhibition":
         return isDark
