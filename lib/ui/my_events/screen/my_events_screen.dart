@@ -28,24 +28,24 @@ class MyEventsScreen extends StatelessWidget {
           ),
         ),
         title:
-            Text(
-                  StringsManager.myEvents,
-                  style: Theme.of(context).textTheme.titleMedium,
-                )
-                .animate()
-                .fade(duration: 800.ms, curve: Curves.easeOut)
-                .slideX(
-                  begin: 0.2,
-                  end: 0,
-                  duration: 600.ms,
-                  curve: Curves.easeOutCubic,
-                )
-                .shimmer(
-                  delay: 800.ms,
-                  duration: 1500.ms,
-                  color: Theme.of(context).colorScheme.primaryContainer,
-                  stops: [0.0, 0.2, 0.4],
-                ),
+        Text(
+          StringsManager.myEvents,
+          style: Theme.of(context).textTheme.titleMedium,
+        )
+            .animate()
+            .fade(duration: 800.ms, curve: Curves.easeOut)
+            .slideX(
+          begin: 0.2,
+          end: 0,
+          duration: 600.ms,
+          curve: Curves.easeOutCubic,
+        )
+            .shimmer(
+          delay: 800.ms,
+          duration: 1500.ms,
+          color: Theme.of(context).colorScheme.primaryContainer,
+          stops: [0.0, 0.2, 0.4],
+        ),
       ),
       body: Padding(
         padding: EdgeInsets.only(
@@ -53,32 +53,36 @@ class MyEventsScreen extends StatelessWidget {
           left: heightScreen * 0.02,
           right: heightScreen * 0.02,
         ),
-        child: Expanded(
-          child: StreamBuilder(
-            stream: FirestoreManager.getMyEventsStream(),
-            builder: (context, snapshot) {
-              /// loading
-              if (snapshot.connectionState == ConnectionState.waiting) {
-                return Center(child: CircularProgressIndicator());
-              }
-              /// error
-              if (snapshot.hasError) {
-                return Center(child: Text(snapshot.error.toString()));
-              }
-              /// success
-              List<Event> myEvents = snapshot.data ?? [];
-              if(myEvents.isEmpty){
-                return Center(child: Text(StringsManager.noEventsYet));
-              }
-              return ListView.separated(
-                itemBuilder: (context, index) =>
-                    EventItem(event: myEvents[index]),
-                itemCount: myEvents.length,
-                separatorBuilder: (context, index) =>
-                    SizedBox(height: heightScreen * 0.02),
-              );
-            },
-          ),
+        child: Column(
+          children: [
+            Expanded(
+              child: StreamBuilder(
+                stream: FirestoreManager.getMyEventsStream(),
+                builder: (context, snapshot) {
+                  /// loading
+                  if (snapshot.connectionState == ConnectionState.waiting) {
+                    return Center(child: CircularProgressIndicator());
+                  }
+                  /// error
+                  if (snapshot.hasError) {
+                    return Center(child: Text(snapshot.error.toString()));
+                  }
+                  /// success
+                  List<Event> myEvents = snapshot.data ?? [];
+                  if(myEvents.isEmpty){
+                    return Center(child: Text(StringsManager.noEventsYet));
+                  }
+                  return ListView.separated(
+                    itemBuilder: (context, index) =>
+                        EventItem(event: myEvents[index]),
+                    itemCount: myEvents.length,
+                    separatorBuilder: (context, index) =>
+                        SizedBox(height: heightScreen * 0.02),
+                  );
+                },
+              ),
+            ),
+          ],
         ),
       ),
     );
