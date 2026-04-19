@@ -18,6 +18,7 @@
 
 ## 🎬 Demo
 
+👉 Watch Demo Video: https://www.linkedin.com/posts/mohamed-shaban-480019398_flutter-firebase-mobiledevelopment-activity-7451430894034153472-FXQ4?utm_source=share&utm_medium=member_desktop&rcm=ACoAAGGI0GABNB-j_SY7kBI5UbRrqZX0uGYNWw8
 <div align="center">
   <video src="assets/ezyZip.mp4" width="300" controls muted autoplay loop>
   </video>
