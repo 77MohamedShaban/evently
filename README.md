@@ -2,7 +2,19 @@
 
 **Evently** is a robust, modern event management application built with Flutter and Firebase. It provides users with a seamless experience for discovering, creating, and managing events, featuring real-time updates, multi-language support, and a highly customizable UI.
 
----
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/8aee3b13-8714-4026-b54c-4228ed4dabe2" height="350"/>
+  <img src="https://github.com/user-attachments/assets/f117e795-3eec-454b-aa14-292b5eeb65a8" height="350"/>
+  <img src="https://github.com/user-attachments/assets/7a358ed9-0a3d-4aed-9578-287958125fea" height="350"/>
+  <img src="https://github.com/user-attachments/assets/dd26077a-31fe-4edf-805a-a1ee43b41bbd" height="350"/>
+<img src="https://github.com/user-attachments/assets/2373efca-8a05-4eb8-b170-c9b9cf9fe9d4"  height="350"/>
+<img src="https://github.com/user-attachments/assets/2ab67787-c567-41c8-aab1-ce3bcfb0d57a"height="350"/>
+<img src="https://github.com/user-attachments/assets/0c8cd275-ec7c-47ec-92c4-32c24d0d0784" height="350" />
+<img src="https://github.com/user-attachments/assets/cfc7c70e-ff47-4cc7-bd19-464a234e4e3e" height="350"/>
+<img src="https://github.com/user-attachments/assets/76542dea-825b-4226-90f5-9738e05773e4" height="350"/>
+<img src="https://github.com/user-attachments/assets/88f3791f-b397-45d5-bd35-f7b5562ae171" height="350"/>
+<img src="https://github.com/user-attachments/assets/20722c5f-5e0e-4405-9967-01d002db511a" height="350"/>
+</p>
 
 ## 🎬 Demo
 
